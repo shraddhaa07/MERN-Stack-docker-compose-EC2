@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Record from "./Record";
 
-const Record = (props) => (
+const RecordRow = (props) => (
   <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
     <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
       {props.record.name}
@@ -37,37 +38,47 @@ const Record = (props) => (
 
 export default function RecordList() {
   const [records, setRecords] = useState([]);
+  const API_URL = import.meta.env.VITE_API_URL; //<-env variable
 
   // This method fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
-      const response = await fetch(`http://localhost:5050/record/`);
-      if (!response.ok) {
-        const message = `An error occurred: ${response.statusText}`;
-        console.error(message);
-        return;
-      }
-      const records = await response.json();
-      setRecords(records);
+	try{
+		const response = await fetch(`${API_URL}/record/`);
+		if (!response.ok) {
+			console.error(`An error occurred: ${response.statusText}`);
+			return;
+		}
+		const records = await response.json();
+		setRecords(records);
+	}catch (err){
+		console.error("Error fetching records: ", err);
+	}
     }
-    getRecords();
-    return;
-  }, [records.length]);
+	  getRecords();
+  }, [API_URL]);
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(`http://localhost:5050/record/${id}`, {
-      method: "DELETE",
-    });
-    const newRecords = records.filter((el) => el._id !== id);
-    setRecords(newRecords);
+    try{
+	    const response = await fetch(`${API_URL}/record/${id}`, {
+		    method: "DELETE",
+	    });
+	    if (!response.ok){
+		    throw new Error(`HTTP error! status: ${response.status}`);
+	    }
+	    const newRecords = records.filter((el) => el._id !== id);
+	    setRecords(newRecords);
+    }catch (err) {
+	    console.error("Error deleting record: ", err);
+    }
   }
 
   // This method will map out the records on the table
   function recordList() {
     return records.map((record) => {
       return (
-        <Record
+        <RecordRow
           record={record}
           deleteRecord={() => deleteRecord(record._id)}
           key={record._id}
