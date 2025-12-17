@@ -28,5 +28,6 @@ cd mern/client
 npm install
 npm run dev
 ```
+<img width="1919" height="782" alt="image" src="https://github.com/user-attachments/assets/1930cd6c-3f8c-47a6-94c9-397a5cd158c8" />
 
-<img width="1790" alt="Screenshot 2024-08-31 at 11 07 58 PM" src="https://github.com/user-attachments/assets/f414230b-8bd6-4393-b8de-6a10444a8dfd">
+<!--<img width="1790" alt="Screenshot 2024-08-31 at 11 07 58 PM" src="https://github.com/user-attachments/assets/f414230b-8bd6-4393-b8de-6a10444a8dfd">-->
