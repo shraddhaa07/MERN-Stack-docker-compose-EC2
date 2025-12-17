@@ -6,6 +6,7 @@
 
 1. Implementation of `Dockerfile` for `client` and `server`.
 2. Run the containers using `Docker Compose`.
+3. Deploy it on `AWS EC2`
 
 ## Run it local without Docker
 
