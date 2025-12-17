@@ -1,4 +1,5 @@
-# A simple MERN stack application
+# 🚀 MERN Stack Application with Docker & AWS EC2
+A full-stack MERN application deployed using Docker Compose on an AWS EC2 instance.
 
 **Note** - To run this project using `docker compose`, follow the below steps.
 
@@ -7,6 +8,14 @@
 1. Implementation of `Dockerfile` for `client` and `server`.
 2. Run the containers using `Docker Compose`.
 3. Deploy it on `AWS EC2`
+
+## ⚙️ Environment Variables
+
+Create a `.env` file based on `.env.example`
+
+```env
+VITE_API_URL=http://<EC2_PUBLIC_IP>:5050
+MONGO_URI=mongodb://mongo:27017/mydatabase 
 
 ## Run it local without Docker
 
