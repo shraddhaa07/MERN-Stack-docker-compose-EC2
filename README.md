@@ -9,6 +9,12 @@ A full-stack MERN application deployed using Docker Compose on an AWS EC2 instan
 2. Run the containers using `Docker Compose`.
 3. Deploy it on `AWS EC2`
 
+## 🐳 Docker Architecture
+- Frontend container (Vite – React)
+- Backend container (Node + Express)
+- MongoDB container
+- Custom Docker network
+
 ## ⚙️ Environment Variables
 
 Create a `.env` file based on `.env.example`
@@ -19,6 +25,7 @@ MONGO_URI=mongodb://mongo:27017/mydatabase
 ```
 
 ## Run it local without Docker
+`docker compose up --build -d`
 
 ### Prerequisite
 
