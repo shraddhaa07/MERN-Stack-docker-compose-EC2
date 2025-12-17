@@ -15,7 +15,8 @@ Create a `.env` file based on `.env.example`
 
 ```env
 VITE_API_URL=http://<EC2_PUBLIC_IP>:5050
-MONGO_URI=mongodb://mongo:27017/mydatabase 
+MONGO_URI=mongodb://mongo:27017/mydatabase
+```
 
 ## Run it local without Docker
 
