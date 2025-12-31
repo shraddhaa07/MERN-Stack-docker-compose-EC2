@@ -15,6 +15,9 @@ A full-stack MERN application deployed using Docker Compose on an AWS EC2 instan
 - MongoDB container
 - Custom Docker network
 
+<img width="911" height="445" alt="diagram-export-17-12-2025-2_54_49-pm" src="https://github.com/user-attachments/assets/b560a79a-2da2-4788-a1b6-668230c0755e" />
+
+
 ## ⚙️ Environment Variables
 
 Create a `.env` file based on `.env.example`
