@@ -1,5 +1,7 @@
 # 🚀 MERN Stack Application with Docker & AWS EC2
 A full-stack MERN application deployed using Docker Compose on an AWS EC2 instance.
+<img width="765" height="334" alt="diagram-export-17-12-2025-12_07_03-pm" src="https://github.com/user-attachments/assets/298276f0-1074-4239-8540-eda79323ce43" />
+
 
 **Note** - To run this project using `docker compose`, follow the below steps.
 
@@ -14,8 +16,6 @@ A full-stack MERN application deployed using Docker Compose on an AWS EC2 instan
 - Backend container (Node + Express)
 - MongoDB container
 - Custom Docker network
-
-<img width="911" height="445" alt="diagram-export-17-12-2025-2_54_49-pm" src="https://github.com/user-attachments/assets/b560a79a-2da2-4788-a1b6-668230c0755e" />
 
 
 ## ⚙️ Environment Variables
