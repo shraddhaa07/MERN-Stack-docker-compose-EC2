@@ -42,7 +42,7 @@ npm install
 npm start
 ```
 
-#### Start Clientless
+#### Start Client
 
 ```
 cd mern/client
